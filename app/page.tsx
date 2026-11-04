@@ -12,11 +12,9 @@ import {
   CircuitBoard, Cpu as Processor
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import Link from 'next/link';
 
 export default function HomePage() {
-  const [videoPlaying, setVideoPlaying] = useState(false);
-
   return (
     <>
       <Navbar />
@@ -62,9 +60,8 @@ export default function HomePage() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <Link
+                    href="/Auth/Register"
                     className="group relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300"
                   >
                     <div className="flex items-center justify-center gap-3">
@@ -73,18 +70,17 @@ export default function HomePage() {
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-indigo-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
-                  </motion.button>
+                  </Link>
 
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <Link
+                    href="/About"
                     className="group bg-white/80 backdrop-blur-sm border-2 border-gray-200 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:border-blue-500 hover:bg-white transition-all duration-300"
                   >
                     <div className="flex items-center justify-center gap-3">
                       <Play className="w-5 h-5 text-blue-600" />
                       <span>Tonton Demo (2 Menit)</span>
                     </div>
-                  </motion.button>
+                  </Link>
                 </div>
 
                 {/* Trust Indicators */}
@@ -542,9 +538,7 @@ export default function HomePage() {
                     </ul>
                     
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r ${plan.color} hover:shadow-lg transition-all duration-300`}
+                          className={`w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r ${plan.color} hover:shadow-lg transition-all duration-300`}
                     >
                       {plan.cta}
                     </motion.button>
@@ -575,26 +569,24 @@ export default function HomePage() {
                 <span className="font-semibold"> Gratis 30 hari</span> untuk semua paket.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <Link
+                  href="/Auth/Register"
                   className="group bg-white text-blue-600 px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300"
                 >
                   <div className="flex items-center justify-center gap-3">
                     <span>Daftar Sekarang - Gratis 30 Hari</span>
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                   </div>
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                </Link>
+                <Link
+                  href="/Contact"
                   className="bg-transparent border-2 border-white/30 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="flex items-center justify-center gap-3">
                     <MessageSquare className="w-6 h-6" />
                     <span>Konsultasi dengan Expert</span>
                   </div>
-                </motion.button>
+                </Link>
               </div>
               <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-blue-100">
                 <div className="text-center">
