@@ -547,7 +547,7 @@ export default function HomePage() {
                       className={`w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r ${plan.color} hover:shadow-lg transition-all duration-300`}
                     >
                       {plan.cta}
-                    </motion(Link)>
+                    </motion.button>
                   </div>
                 </motion.div>
               ))}
@@ -578,7 +578,7 @@ export default function HomePage() {
                 <motion(Link)
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="/Contact"
+                  href="/Auth/Register"
                   className="group bg-white text-blue-600 px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300"
                 >
                   <div className="flex items-center justify-center gap-3">
@@ -589,7 +589,7 @@ export default function HomePage() {
                 <motion(Link)
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="/Auth/Register"
+                  href="/Contact"
                   className="bg-transparent border-2 border-white/30 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="flex items-center justify-center gap-3">
